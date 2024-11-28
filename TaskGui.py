@@ -45,6 +45,7 @@ class TaskGui:
 
        # #"kuula" Comboboxi muutusi
        self.cmb.bind('<<ComboboxSelected>>', self.changed)
+       self.main.bind('<Return>', lambda event=None: self.calculate())
 
    def create_button(self):
        button = Button(self.frame, text='Näita', command=lambda: self.calculate())
@@ -166,10 +167,4 @@ class TaskGui:
           self.txt_a.delete(0, 'end')
           self.txt_b.delete(0, 'end')
           self.txt_a.focus()
-
-
-
-
-
-
 
